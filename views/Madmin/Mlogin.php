@@ -23,7 +23,7 @@
                <div class="logo">
                   <center> <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" /></center>
                </div>
-               <form action="../../auth/config/iniciar_sesion.php" method="POST">
+               <form id="loginForm" action="" method="POST">
                   <div class="coolinput">
                      <label for="usuario">Usuario:</label>
                      <input type="text" name="usuario" class="input" id="usuario" required>
@@ -41,6 +41,8 @@
                      <input class="boton-amarillo-block" id="submitButton" type="submit" value="Iniciar Sesión">
                   </div>
                </form>
+               <div id="alerta"></div>
+
                <div class="coolinput text-center">
                   <a href="#">¿Olvidaste tu contraseña?</a>
                </div>
@@ -56,30 +58,52 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script>
-        // Obtener referencias a los campos y al botón
-        const usuarioInput = document.getElementById('usuario');
-        const passwordInput = document.getElementById('password');
-        const submitButton = document.getElementById('submitButton');
+   $(document).ready(function () {
+    $("#loginForm").submit(function (event) {
+        // Evita el envío predeterminado del formulario
+        event.preventDefault();
 
-        // Función para verificar y habilitar/deshabilitar el botón
-        function validarCampos() {
-            const usuarioValue = usuarioInput.value.trim();
-            const passwordValue = passwordInput.value.trim();
+        // Obtiene los valores del formulario
+        var usuario = $("#usuario").val();
+        var password = $("#password").val();
 
-            // Verificar si los campos están vacíos
-            if (usuarioValue === '' || passwordValue === '') {
-                submitButton.disabled = true;
-            } else {
-                submitButton.disabled = false;
-            }
+        // Verifica si los campos están vacíos
+        if (usuario === "" || password === "") {
+            // Muestra una alerta de error y deshabilita el botón de envío
+            $("#alerta").html('<div class="alert alert-danger">Por favor, completa todos los campos.</div>');
+            $("#loginForm input[type='submit']").prop("disabled", true);
+            return; // Detiene la ejecución de la función
         }
 
-        // Agregar oyentes de eventos para los campos de entrada
-        usuarioInput.addEventListener('input', validarCampos);
-        passwordInput.addEventListener('input', validarCampos);
+        // Envía la solicitud AJAX al servidor PHP
+        $.ajax({
+            type: "POST",
+            url: "auth/iniciar_session.php",
+            data: {
+                usuario: usuario,
+                password: password
+            },
+            success: function (response) {
+                // Maneja la respuesta del servidor
+                if (response === "exito") {
+                    // Muestra una alerta de éxito
+                    $("#alerta").html('<div class="alert alert-success">Iniciaste sesión con éxito.</div>');
+                } else {
+                    // Muestra una alerta de error
+                    $("#alerta").html('<div class="alert alert-danger">Error al iniciar sesión. Verifica tus credenciales.</div>');
+                }
+            }
+        });
+    });
 
-        // Llamar a la función inicialmente para deshabilitar el botón si los campos están vacíos
-        validarCampos();
-    </script>
+    // Habilita el botón de envío cuando se ingresa texto en los campos
+    $("#usuario, #password").on("input", function () {
+        if ($("#usuario").val() !== "" && $("#password").val() !== "") {
+            $("#loginForm input[type='submit']").prop("disabled", false);
+            $("#alerta").html(""); // Limpia la alerta
+        }
+    });
+});
+</script>
    </body>
 </html>
