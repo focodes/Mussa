@@ -38,7 +38,7 @@
                      </label><br>
                   </div>
                   <div class="coolinput text-center">
-                     <input class="boton-amarillo-block" type="submit" value="Iniciar Sesión">
+                     <input class="boton-amarillo-block" id="submitButton" type="submit" value="Iniciar Sesión">
                   </div>
                </form>
                <div class="coolinput text-center">
@@ -55,5 +55,31 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        // Obtener referencias a los campos y al botón
+        const usuarioInput = document.getElementById('usuario');
+        const passwordInput = document.getElementById('password');
+        const submitButton = document.getElementById('submitButton');
+
+        // Función para verificar y habilitar/deshabilitar el botón
+        function validarCampos() {
+            const usuarioValue = usuarioInput.value.trim();
+            const passwordValue = passwordInput.value.trim();
+
+            // Verificar si los campos están vacíos
+            if (usuarioValue === '' || passwordValue === '') {
+                submitButton.disabled = true;
+            } else {
+                submitButton.disabled = false;
+            }
+        }
+
+        // Agregar oyentes de eventos para los campos de entrada
+        usuarioInput.addEventListener('input', validarCampos);
+        passwordInput.addEventListener('input', validarCampos);
+
+        // Llamar a la función inicialmente para deshabilitar el botón si los campos están vacíos
+        validarCampos();
+    </script>
    </body>
 </html>

@@ -1,0 +1,6 @@
+ErrorDocument 404 /404
+
+RewriteEngine on
+Options +FollowSymlinks
+
+Rewriterule ^login$ views/Madmin/Mlogin.php [QSA,L]
