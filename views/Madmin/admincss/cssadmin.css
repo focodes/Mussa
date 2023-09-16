@@ -1,0 +1,207 @@
+
+         /* Estilos del encabezado */
+         .header {
+         background-color: #dc3545;
+         color: #fff;
+         padding: 10px 0;
+         }
+         .footer_ajuste img {
+         width: auto;
+         height: auto;
+         border: 2px solid #140e0e;
+         display: flex;
+         }
+         .logo img {
+         width: 148px;
+         height: 61px;
+         border: 2px solid #140e0e;
+         }
+         .movermenu {
+         margin-top: 0px;
+         margin-left: auto;
+         }
+         .logo h1 {
+         font-size: 24px;
+         margin: 0;
+         padding-left: 10px;
+         display: inline;
+         }
+         .nav__link {
+         list-style: none;
+         padding: 0;
+         display: flex;
+         }
+         .nav__item {
+         margin-right: 20px;
+         margin-top: auto;
+         }
+         .nav__item:last-child {
+         margin-right: 0;
+         }
+         .nav__link a {
+         text-decoration: none;
+         color: #2f2c2c;
+         }
+         .nav__link a:hover {
+         text-decoration: underline;
+         }
+         /* Estilos del formulario de inicio de sesión en pantalla grande */
+         .login-form {
+         max-width: 400px;
+         margin: 0 auto;
+         padding: 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         margin-top: 20px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+         }
+         .login-form h2 {
+         text-align: center;
+         margin-bottom: 20px;
+         }
+         .coolinput {
+         margin-bottom: 15px;
+         }
+         .coolinput label {
+         font-weight: bold;
+         }
+         .coolinput .input {
+         width: 100%;
+         padding: 8px;
+         border: 1px solid #ccc;
+         border-radius: 3px;
+         }
+         .boton-amarillo-block {
+         background-color: #ffc107;
+         color: #333;
+         border: none;
+         padding: 10px 20px;
+         margin-top: 10px;
+         border-radius: 3px;
+         cursor: pointer;
+         }
+         .boton-amarillo-block:hover {
+         background-color: #ffcd38;
+         }
+         /* Estilos personalizados para los elementos del menú desplegable */
+         .dropdown-item {
+         color: #000;
+         /* Cambia el color del texto a negro o el color que prefieras */
+         text-decoration: none;
+         /* Elimina la subrayado de los enlaces */
+         }
+         /* Estilo para los elementos del menú desplegable cuando se despliega */
+         .dropdown-item:hover {
+         background-color: #ccc;
+         /* Cambia el color de fondo al pasar el mouse sobre los elementos */
+         }
+         /* Estilos para el formulario de inicio de sesión en pantalla pequeña */
+         @media (max-width: 768px) {
+         .login-form {
+         margin-top: 0;
+         border: none;
+         box-shadow: none;
+         background-color: transparent;
+         }
+         .login-form h2 {
+         margin-top: 10px;
+         }
+         .coolinput {
+         margin-bottom: 15px;
+         }
+         .coolinput label {
+         font-weight: bold;
+         }
+         .coolinput .input {
+         width: 100%;
+         padding: 8px;
+         border: 1px solid #ccc;
+         border-radius: 3px;
+         }
+         .boton-amarillo-block {
+         background-color: #ffc107;
+         color: #333;
+         border: none;
+         padding: 10px 20px;
+         margin-top: 10px;
+         border-radius: 3px;
+         cursor: pointer;
+         }
+         .boton-amarillo-block:hover {
+         background-color: #ffcd38;
+         }
+         }
+         /* Personaliza el estilo del navbar y el footer */
+         .navbar {
+         background-color: #12ad35;
+         }
+         .navbar-dark .navbar-toggler-icon {
+         background-color: #fff;
+         }
+         .navbar-dark .navbar-nav .nav-link {
+         color: #fff;
+         }
+         .navbar-dark .navbar-nav .nav-link:hover {
+         color: #ccc;
+         }
+         .ml-auto {
+         margin-left: auto !important;
+         }
+         /* Estilos del footer llamativo */
+         .footer {
+         background-color: #333;
+         color: #fff;
+         padding: 30px 0;
+         text-align: center;
+         }
+         .footer-logo img {
+         width: 80px;
+         height: auto;
+         }
+         .footer-info {
+         font-size: 14px;
+         margin-bottom: 20px;
+         }
+         .social-icons {
+         margin-top: 20px;
+         }
+         .social-icons a {
+         color: #ffc107;
+         margin-right: 20px;
+         font-size: 24px;
+         text-decoration: none;
+         transition: color 0.3s;
+         }
+         .social-icons a:hover {
+         color: #ffcd38;
+         }
+
+          /* Estilos del contenido */
+        .content {
+            margin-top: 20px;
+        }
+
+        .admin-panel {
+            display: flex;
+        }
+
+        .admin-sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .admin-content {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .list-group-item {
+            cursor: pointer;
+        }
+
+        /* Estilos de la tabla */
+        .table {
+            width: 100%;
+        }
+   
