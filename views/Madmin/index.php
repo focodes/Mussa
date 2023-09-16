@@ -26,7 +26,7 @@
         <div class="col-md-9 admin-content">
             <!-- Botón de acción -->
             <div class="text-right">
-                <a href="" class="btn btn-primary">Acción</a>
+                <a href="crear_curso.php" class="btn btn-primary" target="_blank">Acción</a>
             </div>
 <br>
             <!-- Tabla de administración -->
