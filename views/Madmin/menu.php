@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
          <a class="navbar-brand" href="#">
             <div class="logo">
-               <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" />
+               <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" /><h1>Mussa Cafec</h1>
             </div>
          </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
