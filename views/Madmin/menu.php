@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
          <a class="navbar-brand" href="#">
             <div class="logo">
-               <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" /><h1>Mussa Cafec</h1>
+               <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" />
             </div>
          </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@ if(!isset($_SESSION['usuario'])){          ?>
                <!-- Ejemplo de usuario logueado -->
                <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="user-image.jpg" alt="Usuario" width="30" height="30">
+                  <img src="<?php echo imagen_del_usuario($usuario_id,$conn); ?>" alt="Usuario" width="30" height="30">
                   <?php echo $_SESSION['usuario']; ?>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="userMenu">

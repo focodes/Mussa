@@ -10,6 +10,7 @@
       <script type="text/javascript" src="ckfinder/ckfinder.js"></script>  
       <!-- Estilos personalizados -->
       <link rel="stylesheet" href="admincss/cssadmin.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    </head>
    <body>
@@ -49,8 +50,16 @@
             </script>
             </div>
             <div class="form-group">
-                <label for="redesSociales">Redes Sociales:</label>
+                <label for="redesSociales">Redes Facebook:</label>
                 <input type="text" class="form-control" id="redesSociales" placeholder="Ingrese las redes sociales">
+            </div>
+            <div class="form-group">
+                <label for="redesSociales1">Redes Twiter:</label>
+                <input type="text" class="form-control" id="redesSociales1" placeholder="Ingrese las redes sociales">
+            </div>
+            <div class="form-group">
+                <label for="redesSociales2">Redes Instagram:</label>
+                <input type="text" class="form-control" id="redesSociales2" placeholder="Ingrese las redes sociales">
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
@@ -60,6 +69,23 @@
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" class="form-control" id="email" placeholder="Ingrese la dirección de correo electrónico">
             </div>
+            <div class="form-group">
+                <label for="direcion">Direccion:</label>
+                <input type="text" class="form-control" id="direcion" placeholder="Ingrese la dirección ">
+            </div>
+            <div class="form-group sm">
+                <label for="direcionx">Activar formulario de login:</label>
+                <select class="form-control">
+                    <option value="">Si</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="direcionc">Activar formulario de login:</label>
+<select class="form-control">
+                    <option value="">Si</option>
+                    <option>No</option>
+                </select>            </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
     </div>

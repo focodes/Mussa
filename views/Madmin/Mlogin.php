@@ -1,3 +1,13 @@
+<?php 
+include "../../conexion/core_db/core.php";
+include "funciones/funciones.php";
+include "auth/validar_session.php";
+
+//si esta logueado no puede estar aqui
+if(isset($logueado) && $logueado == TRUE) {
+  header("Location: index.php");
+}
+        ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -9,6 +19,7 @@
       <!-- Estilos personalizados -->
       <link rel="stylesheet" href="admincss/cssadmin.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
    </head>
    <body>
@@ -19,35 +30,10 @@
       
       <div class="container">
          <div class="row justify-content-center">
-            <div class="col-md-4 login-form">
-               <h2 class="heading">Iniciar Sesión</h2>
-               <div class="logo">
-                  <center> <img src="../../Sena_Colombia_logo 2.svg" alt="Sena_Colombia_logo" class="logo" /></center>
-               </div>
-               <form id="loginForm" action="" method="POST">
-                  <div class="coolinput">
-                     <label for="usuario">Usuario:</label>
-                     <input type="text" name="usuario" class="input" id="usuario" required>
-                  </div>
-                  <div class="coolinput">
-                     <label for="password">Contraseña:</label>
-                     <input type="password" name="password" class="input" id="password" required>
-                  </div>
-                  <div class="coolinput">
-                     <label class="recordar">
-                     <input type="checkbox" name="recordar"> Recordar Sesión
-                     </label><br>
-                  </div>
-                  <div class="coolinput text-center">
-                     <input class="boton-amarillo-block" id="submitButton" type="submit" value="Iniciar Sesión">
-                  </div>
-               </form>
-               <div id="alerta"></div>
-
-               <div class="coolinput text-center">
-                  <a href="#">¿Olvidaste tu contraseña?</a>
-               </div>
-            </div>
+         
+         <?php 
+       // Luego, puedes imprimir el formulario en tu página PHP donde desees mostrarlo:
+         echo login(); ?>
          </div>
       </div>
       <br>
@@ -85,10 +71,28 @@
                 password: password
             },
             success: function (response) {
+               console.log(response);
                 // Maneja la respuesta del servidor
-                if (response === "exito") {
+                if (response.trim() == "exito") {
                     // Muestra una alerta de éxito
+                    
                     $("#alerta").html('<div class="alert alert-success">Iniciaste sesión con éxito.</div>');
+
+                  // Muestra una alerta de éxito con SweetAlert2
+                    Swal.fire({
+                      icon: 'success',
+                      title: 'Inicio de sesión exitoso',
+                      text: 'Serás redirigido en un minuto...',
+                      timer: 10000, // Tiempo en milisegundos (60 segundos = 60000 ms)
+                      timerProgressBar: true, // Muestra una barra de progreso del temporizador
+                      onBeforeOpen: () => {
+                        Swal.showLoading(); // Muestra el indicador de carga
+                      },
+                      onClose: () => {
+                        // Redirige a la página deseada después del inicio de sesión exitoso
+                        window.location.href = "index.php";
+                      }
+                    });
                 } else {
                     // Muestra una alerta de error
                     $("#alerta").html('<div class="alert alert-danger">Error al iniciar sesión. Verifica tus credenciales.</div>');

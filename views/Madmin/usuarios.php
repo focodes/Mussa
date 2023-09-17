@@ -1,3 +1,11 @@
+<?php 
+include "../../conexion/core_db/core.php";
+include "funciones/funciones.php";
+include "auth/validar_session.php";
+//llamamos la funcion de lo usuario registrado para poder banear o desabilitar cuenta
+$usuarios = mostrar_todo_lo_usuario($conn);
+
+        ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -47,12 +55,14 @@
                      </tr>
                   </thead>
                   <tbody>
+
+                     <?PHP foreach ($usuarios as $usuario) {?>
                      <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
+                        <td><?php echo $usuario["Id_user"] ?></td>
+                        <td><?php echo $usuario["Nombre"] ?></td>
+                        <td><?php echo $usuario["email"] ?></td>
                         <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
+                        <td><?php echo lever_del_usuario($usuario["Level"],$conn) ?> </td>
                         <td>
                              <form style="display: inline-block; margin-right: 5px;" method="post" action="">
                          <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
@@ -61,122 +71,12 @@
                         <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        
-                        <td>
-                       <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                            <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
-                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
-                           </form>
-                    <form style="display: inline-block;" method="post" action="">
-                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
-                        </td>
-                     </tr>
+                <?PHP } ?>
+
                   </tbody>
                </table>
             </div>
+             <!-- porqui va la paginacion  -->
          </div>
       </div>
       <br />

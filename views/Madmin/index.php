@@ -1,3 +1,8 @@
+<?php 
+include "../../conexion/core_db/core.php";
+include "funciones/funciones.php";
+include "auth/validar_session.php";
+        ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
