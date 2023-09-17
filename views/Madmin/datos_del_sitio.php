@@ -22,7 +22,7 @@
 <div class="container content">
     <div class="row">
         <!-- Barra lateral de administración -->
-        <?php include "menu_de_administracion.php";?>
+        <?php include "menu_de_adminitracion.php";?>
         <!-- Barra lateral de administración -->
 
         <!-- Contenido principal -->

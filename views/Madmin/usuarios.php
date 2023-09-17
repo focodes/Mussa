@@ -9,6 +9,7 @@
       <!-- Estilos personalizados -->
       <link rel="stylesheet" href="admincss/cssadmin.css">
 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    </head>
    <body>
         <!-- Encabezado -->
@@ -21,7 +22,7 @@
          <div class="row">
 
             <!-- Barra lateral de administración -->
-        <?php include "menu_de_administracion.php";?>
+        <?php include "menu_de_adminitracion.php";?>
         <!-- Barra lateral de administración -->
 
 
@@ -29,12 +30,12 @@
             <div class="col-md-9 admin-content">
                <!-- Botón de acción -->
                <div class="text-right">
-                  <a href="" class="btn btn-primary">Accion</a>
+                  <a href="" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Accion</a>
                </div>
-               <br>
+               <br/>
                <!-- Tabla de administracion -->
 
-               <table class="table table-bordered">
+           <table class="table table-bordered">
                   <thead>
                      <tr>
                         <th>ID</th>
@@ -53,12 +54,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -67,29 +67,13 @@
                         <td>usuario1@example.com</td>
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
-                        <
+                        
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                       <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>1</td>
-                        <td>Usuario 1</td>
-                        <td>usuario1@example.com</td>
-                        <!-- Agrega más filas de tabla según sea necesario -->
-                        <td>Usuario </td>
-                        <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
-                           </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -99,12 +83,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -114,12 +97,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                            <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -129,12 +111,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -144,12 +125,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -159,12 +139,11 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
-                           </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                      <tr>
@@ -174,12 +153,25 @@
                         <!-- Agrega más filas de tabla según sea necesario -->
                         <td>Usuario </td>
                         <td>
-                           <form style="display: inline-block; margin-right: 5px;">
-                              <input type="submit" class="btn btn-primary btn-sm" value="Editar">
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
-                           <form style="display: inline-block;">
-                              <input type="submit" class="btn btn-danger btn-sm" value="Eliminar">
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>Usuario 1</td>
+                        <td>usuario1@example.com</td>
+                        <!-- Agrega más filas de tabla según sea necesario -->
+                        <td>Usuario </td>
+                        <td>
+                             <form style="display: inline-block; margin-right: 5px;" method="post" action="">
+                         <button type="submit" class="btn btn-primary btn-sm" ><i class="fa-solid fa-pen-to-square"></i> Editar</button>
                            </form>
+                    <form style="display: inline-block;" method="post" action="">
+                        <button type="submit" class="btn btn-danger btn-sm" ><i class="fa-solid fa-trash"></i> Eliminar</button>        </form>
                         </td>
                      </tr>
                   </tbody>
