@@ -205,4 +205,21 @@ function login(){
 
 }
 
+// Función para cerrar sesión
+function cerrarSesion() {
+    // Iniciar sesión (asegúrate de hacerlo al comienzo de tus scripts)
+     session_start();
+    // Destruir todas las variables de sesión
+    session_unset();
+    // Destruir la sesión
+    session_destroy();
+    // Redirigir al usuario a la página de inicio de sesión
+    header("Location: Mlogin.php");
+    exit; // Asegura que el script se detenga después de redirigir
+}
+
+// Verificar si el usuario quiere cerrar la sesión
+if (isset($_GET['doLogout']) && $_GET['doLogout'] == "true") {
+    cerrarSesion();
+}
 ?>

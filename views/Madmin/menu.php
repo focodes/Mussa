@@ -50,7 +50,7 @@ if(!isset($_SESSION['usuario'])){          ?>
                     <a class="dropdown-item" href="#">Perfil</a>
                     <a class="dropdown-item" href="#">Configuración</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                    <a class="dropdown-item" href="<?php echo "?doLogout=true"; ?>">Cerrar Sesión</a>
                 </div>
             </li>
         </ul>
